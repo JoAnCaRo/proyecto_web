@@ -1,43 +1,164 @@
 /* Basic Styles */
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    max-width: 1280px; /* Max width for desktop */
+    margin: 0 auto; /* Center the content */
 }
 
-header, footer {
-    background-color: #f3f3f3;
+/* HEADER STYLE STARTS */
+
+header {
+    background-image: url('../images/inicio_pic.jpg'); 
+    background-size: cover;
+    background-position: center;
     padding: 10px;
+    display: flex; /* Enable Flexbox 
+    /* align-items: center; /* Vertically center the content */
+    /* justify-content: space-between; */ /* Space between elements */
+    max-height: 1200px; /* Max height for desktop */
+    width: 100%; /* Ensures it takes the full width */
+}Í
+
+/* .header-box1 {
+    width: 100%;
+    max-height: 1200px;
+    display: flex;
+    flex-direction: row;
+} */
+
+.menu-box {
+    width: 100%;
+    max-height: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.logo-box a {
+    /* display: block; */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.logo-box img {
+    max-width: 20%; /* Ensure the logo is responsive */
+    height: auto;
+    /* Additional styling as needed */
+}
+
+/* .navigation-box {
+    width: 100%;
+    max-height: 1200px;
+    display: flex;
+    flex-direction: row;
+} */
+
+nav {
+    display: flex;
+    justify-content:flex-end; 
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    margin: 0; 
+    padding: 0; 
+    margin-left: auto; 
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin-left: 20px; 
 }
 
 nav ul li a {
     text-decoration: none;
+    color: white;
+} 
+
+.header-box2 {
+    width: 100%;
+    max-height: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centers content-box vertically and horizontally */
+    /* Additional styling as needed */
 }
+
+.text-box {
+   /*  width: 100%; */
+    max-height: 1200px;
+    text-align: center; /* Centers the text */
+    padding: 20px;
+   
+}
+
+.button-box {
+    /*  width: 100%; */
+     max-height: 1200px;
+     text-align: center; /* Centers the text */
+     padding: 20px;
+     text-decoration: none;
+    
+ }
+
+
+/* Styles for the button */
+button {
+    display: block;                   /* Makes the button a block element */
+    margin: 20px auto;                /* Centers the button horizontally */
+    padding: 10px 20px;               /* Padding inside the button */
+    background-color: #007bff;      /* Example button color */
+    color: white;                /* Text color */
+    border: none;
+    border-radius: 5px;             /* Rounded corners */
+    cursor: pointer;                /* Cursor changes to a hand icon when hovered */
+   
+}
+
+h1 {
+    margin: 0;
+    color: #ffffff; /* Example color */
+    /* Additional styling as needed */
+}
+
+p {
+    color: #ffffff; /* Example color */
+    /* Additional styling as needed */
+}
+
+
+/* HEADER STYLE ENDS*/
 
 .content {
     flex: 1;
 }
 
+footer {
+    background-color: #f3f3f3;
+    padding: 10px;
+}
+
 /* Flexbox or Grid can be used here based on the specific layout needs */
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    nav ul {
+@media (max-width: 320px) {
+    body {
+        max-width: 320;
+    }
+
+    .header-box1 {
+        max-height: 520px; /* Adjusting the box height for mobile */
+    }
+    
+    /* nav ul {
         flex-direction: column;
     }
 
     nav ul li {
         margin-bottom: 10px;
-    }
+    } */
 }
-
