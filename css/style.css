@@ -1,164 +1,1996 @@
-/* Basic Styles */
+/* ATRIBUTOS GENERALES */
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+/* Restablece los márgenes y el relleno predeterminados de todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Sarabun";
+}
+
+h1,
+h2,
+h4 {
+    font-family: "Bungee";
+}
+
+h3,
+h5 {
+    font-family: "Sarabun";
+}
+
+.links {
+    font-weight: bold;
+}
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ PÁG INDEX ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ HEADER INDEX ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* Container principal / header index */
+.index.header.container {
+    background-image: url("../images/inicio_pic.jpg");
+    background-size: cover;
+    background-position: bottom;
+    max-width: 1200px;
+    height: 700px;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    max-width: 1280px; /* Max width for desktop */
-    margin: 0 auto; /* Center the content */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* HEADER STYLE STARTS */
+/* Descripción de la foto de fondo del header*/
+.index.header.container::before {
+    content: "Imagen de fondo: Pelota de baloncesto en el suelo de la cancha en primer plano con el fondo desenfocado";
+    position: absolute;
+    left: -9999px;
+}
 
-header {
-    background-image: url('../images/inicio_pic.jpg'); 
-    background-size: cover;
-    background-position: center;
-    padding: 10px;
-    display: flex; /* Enable Flexbox 
-    /* align-items: center; /* Vertically center the content */
-    /* justify-content: space-between; */ /* Space between elements */
-    max-height: 1200px; /* Max height for desktop */
-    width: 100%; /* Ensures it takes the full width */
-}Í
-
-/* .header-box1 {
-    width: 100%;
-    max-height: 1200px;
-    display: flex;
-    flex-direction: row;
-} */
-
-.menu-box {
-    width: 100%;
-    max-height: 1200px;
+/* Container superior / header index */
+.top.containers {
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
 }
 
-
-.logo-box a {
-    /* display: block; */
-    text-decoration: none; /* Removes underline from links */
+.left.top.box,
+.middle.top.box {
+    width: 320px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo-box img {
-    max-width: 20%; /* Ensure the logo is responsive */
+.logo {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 250px;
     height: auto;
-    /* Additional styling as needed */
 }
 
-/* .navigation-box {
+/* Oculta menú hamburguesa de la vista escritorio */
+.label.hamburger,
+.menu.hamburger {
+    display: none;
+}
+
+.right.top.box {
     width: 100%;
-    max-height: 1200px;
+    height: 200px;
     display: flex;
-    flex-direction: row;
-} */
+    flex-grow: 2;
+}
+
+.navigation.box {
+    width: 100%;
+    height: 75px;
+    display: flex;
+}
 
 nav {
     display: flex;
-    justify-content:flex-end; 
+    justify-content: right;
+    width: 100%;
+    height: 100%;
 }
 
 nav ul {
     list-style: none;
+    font-family: Sarabun;
+    font-size: 15px;
     display: flex;
-    margin: 0; 
-    padding: 0; 
-    margin-left: auto; 
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 nav ul li {
-    margin-left: 20px; 
+    margin: 0 37px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-} 
+}
 
-.header-box2 {
+/* Container inferior / header index  */
+.botton.container {
     width: 100%;
-    max-height: 1200px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centers content-box vertically and horizontally */
-    /* Additional styling as needed */
-}
-
-.text-box {
-   /*  width: 100%; */
-    max-height: 1200px;
-    text-align: center; /* Centers the text */
-    padding: 20px;
-   
-}
-
-.button-box {
-    /*  width: 100%; */
-     max-height: 1200px;
-     text-align: center; /* Centers the text */
-     padding: 20px;
-     text-decoration: none;
-    
- }
-
-
-/* Styles for the button */
-button {
-    display: block;                   /* Makes the button a block element */
-    margin: 20px auto;                /* Centers the button horizontally */
-    padding: 10px 20px;               /* Padding inside the button */
-    background-color: #007bff;      /* Example button color */
-    color: white;                /* Text color */
-    border: none;
-    border-radius: 5px;             /* Rounded corners */
-    cursor: pointer;                /* Cursor changes to a hand icon when hovered */
-   
+    align-items: center;
 }
 
 h1 {
-    margin: 0;
-    color: #ffffff; /* Example color */
-    /* Additional styling as needed */
+    color: white;
+    /* font-family: Bungee ; */
+    text-align: center;
+    font-size: 56px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
-p {
-    color: #ffffff; /* Example color */
-    /* Additional styling as needed */
+.botton.container p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
 }
 
-
-/* HEADER STYLE ENDS*/
-
-.content {
-    flex: 1;
+.button.box {
+    padding: 70px;
+    font-weight: bold;
 }
 
-footer {
-    background-color: #f3f3f3;
-    padding: 10px;
+.button.box a {
+    background-color: #47bf71;
+    text-decoration: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 15px;
+    border: none;
+    border-radius: 30px;
 }
 
-/* Flexbox or Grid can be used here based on the specific layout needs */
+.join.btn:hover {
+    background-color: #5c7e65;
+    cursor: pointer;
+}
 
-/* Responsive Design */
-@media (max-width: 320px) {
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ HEADER INDEX ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ MAIN INDEX ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* Container principal / main Index */
+.index.parent.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.titulos h2 {
+    padding-top: 50px;
+}
+
+/* Containers hijos / main Index*/
+.qs.container,
+.ac.container,
+.ins.container,
+.con.container,
+.loc.container,
+.hs.container {
+    width: 1200px;
+    height: auto;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* QUIENES SOMOS Y ACTIVIDADES */
+.qs.box2,
+.qs.box3,
+.qs.box4,
+.ac.box2,
+.ac.box3,
+.ac.box4 {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.qs.box1,
+.qs.box5,
+.ac.box1,
+.ac.box5 {
+    flex-grow: 1;
+}
+
+.qs.box2,
+.qs.box3,
+.qs.box4,
+.ac.box2,
+.ac.box3,
+.ac.box4 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+/* INSTALACIONES Y SERVICIOS */
+.ins.box1,
+.ins.box3 {
+    width: 160px;
+    height: auto;
+    display: flex;
+    flex-grow: 1;
+}
+
+.ins.box2 {
+    width: 160px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    justify-content: center;
+    align-items: center;
+}
+
+.pistas.box,
+.servicios.box {
+    width: 640px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.indoor.box,
+.outdoor.box,
+.gimnasio.box,
+.cafeteria.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* CONTACTO */
+.con.box1,
+.con.box3 {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-grow: 3;
+}
+
+.con.box2 {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email.box,
+.phone.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+/* LOCALIZACIÓN */
+.loc.box1,
+.loc.box3 {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-grow: 1;
+}
+
+.loc.box2 {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.texto.localizacion {
+    color: #37403a;
+    text-align: center;
+    font-size: 15px;
+    width: auto;
+}
+
+/* HAZTE SOCIO */
+.hs.box1,
+.hs.box3 {
+    width: 160px;
+    height: auto;
+    background-color: dodgerblue;
+    border: 1px solid white;
+    display: flex;
+    flex-grow: 1;
+}
+
+.hs.box2 {
+    max-width: 600px;
+    height: auto;
+    background-color: #47bf71;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 3;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    padding: 30px 0;
+}
+
+.formulario.box {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto.formulario,
+.texto.tienda {
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    width: 160px;
+    word-wrap: break-word;
+    padding: 25px 0;
+}
+
+/* HAZTE SOCIO */
+h2 {
+    color: #37403a;
+    font-family: Bungee;
+    text-align: center;
+    font-size: 26px;
+}
+
+.texto.quienes.somos {
+    color: #37403a;
+    text-align: center;
+    font-size: 15px;
+    width: 280px;
+    word-wrap: break-word;
+}
+
+/* Imágenes redimensionadas / main Index  */
+.icon.info img,
+.icon.tienda img,
+.icon.adultos img,
+.icon.infantil img,
+.icon.adaptado img,
+.indoor.box img,
+.outdoor.box img,
+.gimnasio.box img,
+.cafeteria.box img,
+.email.box img,
+.contacto img,
+.formulario.box img,
+.tienda.box img {
+    max-width: 150px;
+    height: auto;
+}
+
+.email.box img {
+    max-width: 50px;
+    height: auto;
+}
+
+.mapa img {
+    max-width: 1000px;
+    height: auto;
+    border-radius: 30px;
+}
+
+/* Descripción de la foto de fondo */
+.mapa::before {
+    content: "Imagen de fondo: Mapa de navegación que muestra donde se encuentra el club de baloncesto";
+    position: absolute;
+    left: -9999px;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ MAIN INDEX ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ FOOTER INDEX ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* Container principal / footer index */
+.index.footer.container {
+    background-color: #bf4b47;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Containers hijos / footer index */
+.titulo.footer.box {
+    width: auto;
+    color: #ffffff;
+    font-family: Bungee;
+    display: flex;
+    justify-content: left;
+    padding: 20px 0;
+    font-size: 18px;
+    text-shadow: none;
+}
+
+.valoraciones.container {
+    width: 1200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.valoraciones.box1,
+.valoraciones.box3 {
+    width: 100px;
+    height: auto;
+    display: flex;
+}
+
+.valoraciones.box2 {
+    width: 290px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+}
+
+/* Elementos dentro de Valoraciones box 2 / footer index */
+.feedbacks {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback.box1,
+.feedback.box2,
+.feedback.box3 {
+    width: 320px;
+    height: auto;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+}
+
+.usuario.box1,
+.usuario.box2,
+.usuario.box3 {
+    width: 290px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.avatar1 img,
+.avatar2 img,
+.avatar3 img {
+    height: 100px;
+}
+
+/* Descripción de la foto de fondo */
+.avatar1::before,
+.avatar2::before,
+.avatar3::before {
+    content: "Imagen de fondo: Foto del usuario que escribió feedback";
+    position: absolute;
+    left: -9999px;
+}
+
+.nombre.stars {
+    width: 220px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.nombre1,
+.nombre2,
+.nombre3 {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.stars1 img,
+.stars2 img,
+.stars3 img {
+    height: 30px;
+}
+
+.comentario.box1,
+.comentario.box2,
+.comentario.box3 {
+    width: auto;
+    height: auto;
+    font-weight: 200;
+    font-style: italic;
+    padding: 10px 10px;
+    text-align: justify;
+}
+
+/* container redes / footer index */
+.redes.box {
+    width: auto;
+    height: auto;
+    padding: 25px 350px 10px 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes.box img {
+    max-width: 30px;
+    height: auto;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ FOOTER INDEX ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ PÁGINA PRESENTACIÓN ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ HEADER PRESENTACIÓN ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.presentacion.header.container {
+    background-image: url("../images/presentation_pic.jpg");
+    background-size: cover;
+    background-position: bottom;
+    max-width: 1200px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Descripción de la foto de fondo del header*/
+.presentacion.header.container::before {
+    content: "Imagen de fondo: Equipo de baloncesto en corro colocando las manos juntas en el centro. La foto esta tomada desde dentro del corro y apuntando hacía arriba enfocando las manos";
+    position: absolute;
+    left: -9999px;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ HEADER PRESENTACIÓN ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ MAIN PRESENTACIÓN ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* Container principal / main presentación */
+.presentacion.main.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+/* Título y texto / main presentación */
+.presentacion.titulo,
+.presentacion.texto {
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentacion.titulo h5 {
+    color: #37403a;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.presentacion.texto p {
+    text-align: justify;
+    padding: 20px 10px;
+}
+
+/* Container reciclaje y tienda / main presentación */
+.container.reciclaje.tienda {
+    padding: 20px 0;
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.reciclaje,
+.tienda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.p.reciclaje {
+    text-align: center;
+    width: 200px;
+    word-wrap: break-word;
+}
+
+.p.tienda {
+    text-align: center;
+    width: 240px;
+    word-wrap: break-word;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ MAIN PRESENTACIÓN ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ FOOTER PRESENTACIÓN ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.presentacion.footer.container {
+    max-width: 1200px;
+    height: auto;
+    justify-content: center;
+    background-color: #bf4b47;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ FOOTER PRESENTACIÓN ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ PÁGINA FORMULARIO ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ HEADER FORMULARIO ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* Container principal / header formulario */
+.formulario.header.container {
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Home logo / header formulario */
+.home.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Navegador / header formulario */
+.form.navigation.box nav ul li a,
+.shop.navigation.box nav ul li a {
+    text-decoration: none;
+    color: #37403a;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ HEADER FORMULARIO ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ MAIN FORMULARIO ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* Container principal / main formulario */
+.formulario.main.container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título y texto / main formulario */
+.formulario.titulo,
+.formulario.texto {
+    width: fit-content;
+}
+
+.formulario.texto p {
+    color: #37403a;
+}
+
+.highlighted.word {
+    color: #47bf71;
+    font-weight: bold;
+}
+
+/* Logo y formulario / main formulario */
+.container.logo.formulario {
+    width: 900px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: 50px 0;
+}
+
+.formulario.logo.box {
+    display: flex;
+    justify-content: left;
+    width: auto;
+}
+
+.logo.verde {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo.verde img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Estilos formulario / main formulario */
+form {
+    padding: 30px 20px;
+    box-shadow: 3px 3px 5px #47bf71;
+    border-radius: 20px;
+    text-align: center;
+    width: 440px;
+}
+
+.inputs.form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.horizontal.fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.horizontal.fields label,
+.horizontal.fields input {
+    display: block;
+}
+
+.horizontal.fields>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.address.field,
+.municipality.field {
+    width: 210px;
+}
+
+.phone.field,
+.email.field {
+    width: 190px;
+}
+
+label {
+    color: #37403a;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid #47bf71;
+    font-family: "Sarabun";
+    outline-color: #5c7e65;
+}
+
+textarea {
+    resize: vertical;
+    max-width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #47bf71;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.condiciones {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.condiciones a {
+    color: #47bf71;
+    text-decoration: none;
+}
+
+.btn.enviar {
+    align-items: center;
+    border: 0;
+    border-radius: 20px;
+    font-family: "Sarabun";
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #47bf71;
+    padding: 10px 0;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 130px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #5c7e65;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ MAIN FORMULARIO ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ FOOTER FORMULARIO ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.formulario.footer.container {
+    background-color: #bf4b47;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulario.redes.box {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.formulario.redes.box img {
+    max-width: 30px;
+    height: auto;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ FOOTER FORMULARIO ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ HEADER TIENDA ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.shop.header.container {
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left.top.box {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.home.icon {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 40px;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ HEADER TIENDA ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ MAIN TIENDA ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* Container principal / main tienda */
+.shop.main.container {
+    max-width: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0;
+}
+
+.shop.text {
+    width: 590px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.shop.text p {
+    color: #37403a;
+}
+
+/* Navegador / main tienda */
+.shop.nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.user.name.box,
+.phantom.box,
+.wantlist.box,
+.shopping.cart.box {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    margin: 0 15px;
+}
+
+.user.name.box {
+    flex-grow: 2;
+    justify-content: left;
+}
+
+.user.name {
+    color: #bf4b47;
+}
+
+.phantom.box {
+    flex-grow: 5;
+}
+
+.wantlist.box {
+    flex-grow: 0;
+    align-items: last baseline;
+}
+
+.shopping.cart.box {
+    flex-grow: 0;
+    align-items: last baseline;
+}
+
+.wantlist.box img,
+.shopping.cart.box img {
+    max-width: 30px;
+    height: auto;
+}
+
+/* Linea separadora / main tienda */
+.decoration.line {
+    height: 1px;
+    background-color: #37403a;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Container productos / main tienda */
+.shop.products {
+    width: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Selección de categorias / main tienda */
+.left.boxes {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title.shop1 {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.title.shop1 h2,
+.title.shop2 h2 {
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.red.box.left {
+    width: 280px;
+    height: auto;
+    background-color: #bf4b47;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.genero.titulo,
+.items.titulo,
+.estado.titulo {
+    width: 270px;
+    height: auto;
+}
+
+.genero.titulo h2,
+.items.titulo h2,
+.estado.titulo h2 {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.genero.box,
+.items.box,
+.estado.box {
+    width: 250px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.genero.box {
+    width: 250px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Estilo para los botones en su estado normal / main tienda */
+.adultos.box,
+.infantil.box,
+.ropa.box,
+.calzado.box,
+.material.box,
+.nuevo.box,
+.poco.usado.box,
+.muy.usado.box {
+    width: 75px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.muestra.todo.box1,
+.muestra.todo.box2,
+.muestra.todo.box3 {
+    width: 175px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.adultos.box p,
+.infantil.box p,
+.ropa.box p,
+.calzado.box p,
+.material.box p,
+.nuevo.box p,
+.poco.usado.box p,
+.muy.usado.box p,
+.muestra.todo.box1 p,
+.muestra.todo.box2 p,
+.muestra.todo.box3 p {
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 11px;
+}
+
+/* Estilo para los botones cuando están activos / main tienda */
+.adultos.box.active,
+.infantil.box.active,
+.ropa.box.active,
+.calzado.box.active,
+.material.box.active,
+.nuevo.box.active,
+.poco.usado.box.active,
+.muy.usado.box.active,
+.muestra.todo.box1.active,
+.muestra.todo.box2.active,
+.muestra.todo.box3.active {
+    background-color: #ffffff;
+}
+
+.adultos.box.active p,
+.infantil.box.active p,
+.ropa.box.active p,
+.calzado.box.active p,
+.material.box.active p,
+.nuevo.box.active p,
+.poco.usado.box.active p,
+.muy.usado.box.active p,
+.muestra.todo.box1.active p,
+.muestra.todo.box2.active p,
+.muestra.todo.box3.active p {
+    color: #bf4b47;
+}
+
+.separador {
+    height: 3px;
+    background-color: #ffffff;
+    width: 85%;
+    margin: 20px 0;
+}
+
+/* Productos / main tienda */
+.middle.right.boxes {
+    width: 600px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title.shop2 {
+    width: 600px;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.all.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product.box1,
+.product.box2,
+.product.box3,
+.product.box4 {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.product.pic1,
+.product.pic2,
+.product.pic3,
+.product.pic4 {
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.product.pic1 {
+    background-image: url("../images/sneakers.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.product.pic2 {
+    background-image: url("../images/basket_ball.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.product.pic3 {
+    background-image: url("../images/sneakers.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.product.pic4 {
+    background-image: url("../images/basket_ball.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+/* Descripción de la foto de fondo */
+.product.pic1::before,
+.product.pic2::before,
+.product.pic3::before,
+.product.pic4::before {
+    content: "Imagen de fondo: Foto de l producto en venta";
+    position: absolute;
+    left: -9999px;
+}
+
+.wantlist.icon,
+.arrow.icon {
+    width: 60px;
+    height: 35px;
+    background-color: #ffffff;
+    border-radius: 5px 0 0 5px;
+    margin-top: 15px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow.icon:last-child {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.wantlist.icon img {
+    max-width: 30px;
+    height: auto;
+}
+
+.arrow.icon img {
+    max-width: 40px;
+    height: auto;
+}
+
+.wantlist.icon a,
+.arrow.icon a {
+    padding-top: 5px;
+}
+
+.product.description1,
+.product.description2,
+.product.description3,
+.product.description4 {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 10px;
+}
+
+.product.name1,
+.product.name2,
+.product.name3,
+.product.name4 {
+    font-weight: 100;
+    color: #37403a;
+}
+
+.product.definition1,
+.product.definition2,
+.product.definition3,
+.product.definition4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #37403a;
+}
+
+.product.price1,
+.product.price2,
+.product.price3,
+.product.price4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #bf4b47;
+    padding: 0;
+}
+
+.product.date1,
+.product.date2,
+.product.date3,
+.product.date4 {
+    font-weight: 100;
+    color: #37403a;
+}
+
+.mensaje.btn {
+    align-items: center;
+    border: 0;
+    border-radius: 20px;
+    font-family: "Sarabun";
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #47bf71;
+    padding: 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 130px;
+    cursor: pointer;
+}
+
+/* Flechas cambio de pantalla / main tienda */
+.change.pages {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.change.pages img {
+    max-width: 30px;
+    height: auto;
+}
+
+.left.arrow {
+    transform: scaleX(-1);
+}
+
+.change.pages p {
+    margin: 0 30px;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ MAIN TIENDA ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ FOOTER TIENDA ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.shop.footer.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #bf4b47;
+}
+
+.shop.redes.box {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.shop.redes.box img {
+    max-width: 30px;
+    height: auto;
+}
+
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ FOOTER TIENDA ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ RESPONSIVE DESIGN ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼  INDEX  ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+@media screen and (min-width: 320px) and (max-width: 425px) {
+
+    /* GENERALES */
     body {
-        max-width: 320;
+        max-width: 100%;
+        margin: 0 10px;
     }
 
-    .header-box1 {
-        max-height: 520px; /* Adjusting the box height for mobile */
+    .index.footer.container {
+        max-width: 100%;
+        height: auto;
+        justify-content: center;
+        background-color: #bf4b47;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px 10px 0 0;
     }
-    
-    /* nav ul {
+
+    .home.icon {
+        margin: 20px 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home.icon img {
+        width: 40px;
+        height: 40px
+    }
+
+    .middle.top.box {
+        display: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+    }
+
+    /* ▼▼▼▼ MENU HAMBURGUESA ▼▼▼▼ */
+    .label.hamburger {
+        display: block;
+    }
+
+    .menu.hamburger {
+        display: none;
+    }
+
+    .menu.hamburger:checked+.ul.links {
+        height: 525px;
+        border: 0.5px solid #37403a;
+    }
+
+    .menu.btn {
+        position: absolute;
+        top: 25px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .ul.links {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 0 0 15px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        gap: 5rem;
+        height: 0;
+        overflow: hidden;
+        transition: all .3s;
+        border: none;
+    }
+
+    .links {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #37403a;
+    }
+
+    /* ▲▲▲▲ MENU HAMBURGUESA ▲▲▲▲ */
+    .qs.container,
+    .ac.container,
+    .ins.container,
+    .con.container,
+    .loc.container,
+    .hs.container {
+        height: auto;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo.footer.box h4 {
+        width: 160px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+
+    .valoraciones.box2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .avatar1 img,
+    .avatar2 img,
+    .avatar3 img {
+        height: 75px;
+    }
+
+    .stars1 img,
+    .stars2 img,
+    .stars3 img {
+        height: 25px;
+    }
+
+    .feedback.box1,
+    .feedback.box2,
+    .feedback.box3 {
+        max-width: 90%;
+        margin: 10px 10px;
+        height: auto;
+        background-color: #d9d9d9;
+        border-radius: 10px;
+    }
+
+    .comentario.box1,
+    .comentario.box2,
+    .comentario.box3 {
+        max-width: 90%;
+        height: auto;
+        font-weight: 200;
+        font-style: italic;
+        padding-left: 10px;
+        text-align: justify;
+    }
+
+    .redes.box div {
+        max-width: 100%;
+        padding: 0 20px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+    }
+
+    /* GENERALES */
+    /* ALINEACIÓN EN COLUMNAS */
+    .index.header.container {
+        max-width: 100%;
+        margin: 0 auto;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .qs.container,
+    .ac.container,
+    .ins.container,
+    .con.container,
+    .loc.container,
+    .hs.container {
+        max-width: 100%;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pistas.box,
+    .servicios.box {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .hs.box2 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 3;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+    }
+
+    .index.footer.container {
+        max-width: 100%;
+        height: auto;
+        justify-content: center;
+        background-color: #bf4b47;
+        display: flex;
         flex-direction: column;
     }
 
-    nav ul li {
-        margin-bottom: 10px;
-    } */
+    .valoraciones.container {
+        width: auto;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* OCULTO */
+    .valoraciones.box1,
+    .valoraciones.box3,
+    .qs.box1,
+    .qs.box5 .ac.box1,
+    .ac.box5,
+    .ins.box1,
+    .con.box1,
+    .con.box3,
+    .loc.box1,
+    .loc.box3,
+    .hs.box1,
+    .hs.box3 {
+        display: none;
+    }
+
+    .feedbacks {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* REDIMENSIONAR CONTENIDO*/
+    .top.containers {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .left.top.box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: left;
+        align-items: start;
+    }
+
+    .right.top.box {
+        width: 300px;
+        height: auto;
+        display: flex;
+        justify-content: right;
+        align-items: start;
+    }
+
+    .logo {
+        height: 75px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .botton.container {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botton.container h1 {
+        color: white;
+        text-align: center;
+        font-size: 2.3rem;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    .botton.container p {
+        color: white;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0px 20px;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    /* ------------------------------------------------------------- MAIN ------------------------------------------------------------- */
+    h2 {
+        font-size: 20px;
+    }
+
+    .loc.box2 {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .mapa img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .index.parent.container {
+        padding-bottom: 0;
+    }
+
+    /* ------------------------------------------------------------- FOOTER ------------------------------------------------------------- */
+    .valoraciones.box1,
+    .valoraciones.box3 {
+        /* OCULTO */
+        display: none;
+    }
+}
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ RESPONSIVE DESIGN ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼   PRESENTACION  ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .presentacion.header.container {
+        max-width: 100%;
+        margin: 0 auto;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .presentacion.footer.container {
+        max-width: 100%;
+        height: auto;
+        justify-content: center;
+        background-color: #bf4b47;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .presentacion.titulo,
+    .presentacion.texto,
+    .container.reciclaje.tienda {
+        max-width: 100%;
+        margin: 0 auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .presentacion.titulo h5 {
+        width: 120px;
+    }
+}
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ RESPONSIVE DESIGN ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼  FORMULARIO  ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    body {
+        max-width: 100%;
+        margin: 0 10px;
+    }
+
+    .formulario.main.container {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .formulario.titulo h2 {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        padding: 30px 0;
+    }
+
+    .formulario.titulo h2 {
+        width: 110px;
+        word-wrap: break-word;
+    }
+
+    .formulario.texto {
+        width: 100%;
+        padding: 30px 0;
+        text-align: justify;
+    }
+
+    .container.logo.formulario {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .formulario.logo.box {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .logo.verde {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .formulario.box,
+    .tienda.box {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .texto.formulario,
+    .texto.tienda {
+        text-align: center;
+    }
+
+    form {
+        box-shadow: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .horizontal.fields {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .address.field,
+    .municipality.field {
+        width: 100%;
+    }
+
+    .phone.field,
+    .email.field {
+        width: 100%;
+    }
+
+    .formulario.footer.container {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .formulario.redes.box {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 0;
+        gap: 0px;
+    }
+
+    .formulario.redes.box img {
+        max-width: 30px;
+        height: auto;
+        /* padding: 0;
+        margin: 0; */
+    }
+}
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ RESPONSIVE DESIGN ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼  TIENDA  ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+@media screen and (min-width: 320px) and (max-width: 425px) {
+
+    .shop.title,
+    .shop.text {
+        width: 190px;
+        word-wrap: break-word;
+    }
+
+    .shop.main.container {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shop.products,
+    .middle.right.boxes {
+        max-width: 100%;
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    .title.shop2,
+    .all.products {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .product.box1,
+    .product.box2,
+    .product.box3,
+    .product.box4 {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .product.pic1,
+    .product.pic2,
+    .product.pic3,
+    .product.pic4 {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product.description1,
+    .product.description2,
+    .product.description3,
+    .product.description4 {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+    .shop.footer.container {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .shop.redes.box {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 0;
+        gap: 0px;
+    }
+
+    .shop.redes.box img {
+        max-width: 30px;
+        height: auto;
+    }
 }

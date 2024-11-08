@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- RESPONSIVE DESIGN / Activa "media queries" -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Un club de baloncesto social y comunitario donde los socios comparten y reciclan material deportivo para promover la comunidad y el deporte." />
+    <meta name="author" content="José Antonio Carmona Romero" />
+    <!-- Instrucciones para los motores de búsqueda sobre cómo indexar la página.-->
+    <meta name="robots" content="index, follow" />
+    <!-- Compativilidad con Internet Explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tienda</title>
+    <!-- Icono Favicon para visualizar en pestaña del navegador-->
+    <link rel="icon" href="logo/logo_green.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="shop header container">
+        <div class="top containers">
+          <div class="left top box">
+            <div class="home icon">
+              <a href="index.html">
+                <img src="icons/home.png" alt="home" />
+              </a>
+            </div>
+          </div>
+          <!-- Middle empty box -->
+          <div class="middle top box"></div>
+          <div class="right top box">
+            <div class="shop navigation box">
+              <nav>
+                <label class="label hamburger" for="menu_hamburger">
+                  <img
+                    src="icons/menu_button_black.png"
+                    alt="menu"
+                    class="menu btn"
+                  />
+                </label>
+
+                <input
+                  class="menu hamburger"
+                  type="checkbox"
+                  name="menu"
+                  id="menu_hamburger"
+                />
+
+                <ul class="ul links">
+                  <li class="li links">
+                    <a href="presentacion.html" class="links">Quienes Somos</a>
+                  </li>
+                  <li class="li links">
+                    <a href="#" class="links">Actividades</a>
+                  </li>
+                  <li class="li links">
+                    <a href="#" class="links">Instalaciones</a>
+                  </li>
+                  <li class="li links">
+                    <a href="#" class="links">Contacto</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="shop main container">
+        <div class="shop title">
+          <h2>
+            bienvenido a la tienda de
+            <span class="highlighted word">the green team</span>
+          </h2>
+        </div>
+        <div class="shop text">
+          <p>
+            Compra, intercambia o vende el material deportivo que ya no uses y
+            ayudanos a fomentar la sostenibilidad.
+          </p>
+        </div>
+        <div class="shop nav">
+          <div class="user name box">
+            <h3 class="user name">Hola José</h3>
+          </div>
+          <!-- Empty box -->
+          <div class="phantom box"></div>
+          <div class="wantlist box">
+            <a href="#">
+              <img src="icons/heart_black.png" alt="heart" />
+            </a>
+          </div>
+          <div class="shopping cart box">
+            <a href="#">
+              <img src="icons/shopping_cart_black.png" alt="shopcart" />
+            </a>
+          </div>
+        </div>
+        <div class="decoration line"></div>
+        <div class="shop products">
+          <div class="left boxes">
+            <div class="title shop1">
+              <h2 class="">selecciona categorias</h2>
+            </div>
+            <div class="red box left">
+              <div class="genero titulo">
+                <h2>Género</h2>
+              </div>
+              <div class="genero box">
+                <div class="adultos box">
+                  <p>Adultos</p>
+                </div>
+                <div class="infantil box">
+                  <p>Infantil</p>
+                </div>
+              </div>
+              <div class="muestra todo box1">
+                <p>Muestra todo</p>
+              </div>
+              <div class="separador"></div>
+
+              <div class="items titulo">
+                <h2>Items</h2>
+              </div>
+              <div class="items box">
+                <div class="ropa box">
+                  <p>Ropa</p>
+                </div>
+                <div class="calzado box">
+                  <p>Calzado</p>
+                </div>
+                <div class="material box">
+                  <p>Mat. deportivo</p>
+                </div>
+              </div>
+              <div class="muestra todo box2">
+                <p>Muestra todo</p>
+              </div>
+              <div class="separador"></div>
+              <div class="estado titulo">
+                <h2>Estado</h2>
+              </div>
+              <div class="estado box">
+                <div class="nuevo box">
+                  <p>Nuevo</p>
+                </div>
+                <div class="poco usado box">
+                  <p>Poco usado</p>
+                </div>
+                <div class="muy usado box">
+                  <p>Muy usado</p>
+                </div>
+              </div>
+              <div class="muestra todo box3">
+                <p>Muestra todo</p>
+              </div>
+            </div>
+          </div>
+          <div class="middle right boxes">
+            <div class="title shop2">
+              <h2 class="">items</h2>
+            </div>
+            <div class="all products">
+              <div class="product box1">
+                <div class="product pic1">
+                  <div class="wantlist icon">
+                    <!-- Controlador de eventos onclick -->
+                    <a href="#" onclick="toggleImage(this); return false;">
+                      <img src="icons/heart_black.png" alt="wantlist" />
+                    </a>
+                  </div>
+                  <div class="arrow icon">
+                    <a href="#">
+                      <img
+                        src="icons/next_black.png"
+                        alt="left"
+                        class="left arrow"
+                      />
+                    </a>
+                    <a href="#">
+                      <img src="icons/next_black.png" alt="right" />
+                    </a>
+                  </div>
+                </div>
+                <div class="product description1">
+                  <div class="product name1">
+                    <p>María D.</p>
+                  </div>
+                  <div class="product definition1">
+                    <p>Deportivas Adidas</p>
+                  </div>
+                  <div class="product price1">
+                    <p>50 €</p>
+                  </div>
+                  <div class="product date1">
+                    <p>Subido: 20.11.2023</p>
+                  </div>
+                  <button class="mensaje btn" type="submit">
+                    Enviar mensaje
+                  </button>
+                </div>
+              </div>
+              <div class="product box2">
+                <div class="product pic2">
+                  <div class="wantlist icon">
+                    <a href="#" onclick="toggleImage(this); return false;">
+                      <img src="icons/heart_black.png" alt="wantlist" />
+                    </a>
+                  </div>
+                  <div class="arrow icon">
+                    <a href="#">
+                      <img
+                        src="icons/next_black.png"
+                        alt="left"
+                        class="left arrow"
+                      />
+                    </a>
+                    <a href="#">
+                      <img src="icons/next_black.png" alt="right" />
+                    </a>
+                  </div>
+                </div>
+                <div class="product description2">
+                  <div class="product name2">
+                    <p>Iván A.</p>
+                  </div>
+                  <div class="product definition2">
+                    <p>Bola de baloncesto</p>
+                  </div>
+                  <div class="product price2">
+                    <p>35 €</p>
+                  </div>
+                  <div class="product date2">
+                    <p>Subido: 15.10.2023</p>
+                  </div>
+                  <button class="mensaje btn" type="submit">
+                    Enviar mensaje
+                  </button>
+                </div>
+              </div>
+              <div class="product box3">
+                <div class="product pic3">
+                  <div class="wantlist icon">
+                    <a href="#" onclick="toggleImage(this); return false;">
+                      <img src="icons/heart_black.png" alt="wantlist" />
+                    </a>
+                  </div>
+                  <div class="arrow icon">
+                    <a href="#">
+                      <img
+                        src="icons/next_black.png"
+                        alt="left"
+                        class="left arrow"
+                      />
+                    </a>
+                    <a href="#">
+                      <img src="icons/next_black.png" alt="right" />
+                    </a>
+                  </div>
+                </div>
+                <div class="product description3">
+                  <div class="product name3">
+                    <p>María D.</p>
+                  </div>
+                  <div class="product definition3">
+                    <p>Deportivas Adidas</p>
+                  </div>
+                  <div class="product price3">
+                    <p>50 €</p>
+                  </div>
+                  <div class="product date3">
+                    <p>Subido: 20.11.2023</p>
+                  </div>
+                  <button class="mensaje btn" type="submit">
+                    Enviar mensaje
+                  </button>
+                </div>
+              </div>
+              <div class="product box4">
+                <div class="product pic4">
+                  <div class="wantlist icon">
+                    <a href="#" onclick="toggleImage(this); return false;">
+                      <img src="icons/heart_black.png" alt="wantlist" />
+                    </a>
+                  </div>
+                  <div class="arrow icon">
+                    <a href="#">
+                      <img
+                        src="icons/next_black.png"
+                        alt="left"
+                        class="left arrow"
+                      />
+                    </a>
+                    <a href="#">
+                      <img src="icons/next_black.png" alt="right" />
+                    </a>
+                  </div>
+                </div>
+                <div class="product description4">
+                  <div class="product name4">
+                    <p>Iván A.</p>
+                  </div>
+                  <div class="product definition4">
+                    <p>Bola de baloncesto</p>
+                  </div>
+                  <div class="product price4">
+                    <p>35 €</p>
+                  </div>
+                  <div class="product date4">
+                    <p>Subido: 15.10.2023</p>
+                  </div>
+                  <button class="mensaje btn" type="submit">
+                    Enviar mensaje
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="change pages">
+          <a href="#">
+            <img src="icons/next_black.png" alt="left" class="left arrow" />
+          </a>
+          <p>Página 1 de 5</p>
+          <a href="#">
+            <img src="icons/next_black.png" alt="right" />
+          </a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="shop footer container">
+        <div class="shop redes box">
+          <div class="linkedin">
+            <a href="https://de.linkedin.com/">
+              <img src="icons/linkedin.png" alt="redes" />
+            </a>
+          </div>
+          <div class="facebook">
+            <a href="https://www.facebook.com/">
+              <img src="icons/facebook.png" alt="redes" />
+            </a>
+          </div>
+          <div class="tiktok">
+            <a href="https://www.tiktok.com/">
+              <img src="icons/tiktok.png" alt="redes" />
+            </a>
+          </div>
+          <div class="instagram">
+            <a href="https://www.instagram.com/">
+              <img src="icons/instagram.png" alt="redes" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      /* TIENDA (Cambio de estado para botones en esta página) */
+      document.addEventListener("DOMContentLoaded", function () {
+        const adultosBox = document.querySelector(".adultos.box");
+        const infantilBox = document.querySelector(".infantil.box");
+        const ropaBox = document.querySelector(".ropa.box");
+        const calzadoBox = document.querySelector(".calzado.box");
+        const materialBox = document.querySelector(".material.box");
+        const nuevoBox = document.querySelector(".nuevo.box");
+        const pocoUsadoBox = document.querySelector(".poco.usado.box");
+        const muyUsadoBox = document.querySelector(".muy.usado.box");
+        const muestraTodoBox1 = document.querySelector(".muestra.todo.box1");
+        const muestraTodoBox2 = document.querySelector(".muestra.todo.box2");
+        const muestraTodoBox3 = document.querySelector(".muestra.todo.box3");
+
+        adultosBox.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+
+        infantilBox.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+
+        ropaBox.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+
+        calzadoBox.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+
+        materialBox.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+
+        nuevoBox.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+
+        pocoUsadoBox.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+
+        muyUsadoBox.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+
+        muestraTodoBox1.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+
+        muestraTodoBox2.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+        muestraTodoBox3.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+      });
+
+      /* TIENDA (Cambio de estado para botones "wantlist" en esta página") */
+      function toggleImage(element) {
+        var image = element.getElementsByTagName("img")[0];
+        if (image.src.includes("heart_black.png")) {
+          image.src = "icons/heart_verde.png";
+        } else {
+          image.src = "icons/heart_black.png";
+        }
+      }
+    </script>
+  </body>
+</html>

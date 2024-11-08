@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- RESPONSIVE DESIGN / Activa "media queries" -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Un club de baloncesto social y comunitario donde los socios comparten y reciclan material deportivo para promover la comunidad y el deporte." />
+    <meta name="author" content="José Antonio Carmona Romero" />
+    <!-- Instrucciones para los motores de búsqueda sobre cómo indexar la página.-->
+    <meta name="robots" content="index, follow" />
+    <!-- Compativilidad con Internet Explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Formulario</title>
+    <!-- Icono Favicon para visualizar en pestaña del navegador-->
+    <link rel="icon" href="logo/logo_green.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="formulario header container">
+        <div class="top containers">
+          <div class="left top box">
+            <div class="home icon">
+              <a href="index.html">
+                <img src="icons/home.png" alt="home" />
+              </a>
+            </div>
+          </div>
+          <!-- Middle empty box -->
+          <div class="middle top box"></div>
+          <div class="right top box">
+            <div class="form navigation box">
+              <nav>
+                <label class="label hamburger" for="menu_hamburger">
+                  <img
+                    src="icons/menu_button_black.png"
+                    alt="menu"
+                    class="menu btn"
+                  />
+                </label>
+
+                <input
+                  class="menu hamburger"
+                  type="checkbox"
+                  name="menu"
+                  id="menu_hamburger"
+                />
+
+                <ul class="ul links">
+                  <li class="li links">
+                    <a href="presentacion.html" class="links">Quienes Somos</a>
+                  </li>
+                  <li class="li links">
+                    <a href="#" class="links">Actividades</a>
+                  </li>
+                  <li class="li links">
+                    <a href="#" class="links">Instalaciones</a>
+                  </li>
+                  <li class="li links">
+                    <a href="#" class="links">Contacto</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="formulario main container">
+        <div class="formulario titulo">
+          <h2>únete a nuestra familia</h2>
+        </div>
+        <div class="formulario texto">
+          <p>
+            Nuestros socios cuentan con ventajas exclusivas como acceso a la
+            tienda de segunda mano y a nuestros talleres. Envíanos el formulario
+            y empieza a disfrutar de todas las ventajas de ser socio de
+            <span class="highlighted word"> The Green Team</span>.
+          </p>
+        </div>
+        <div class="container logo formulario">
+          <div class="formulario logo box">
+            <div class="logo verde">
+              <img src="logo/logo_green.png" alt="reciclaje" />
+            </div>
+          </div>
+          <div class="formulario box">
+            <form action="/submit_form" method="post">
+              <div class="inputs form">
+                <label for="name">Nombre</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="given-name"
+                  placeholder="*Campo obligatorio"
+                  required
+                />
+                <label for="surname">Apellidos</label>
+                <input
+                  type="text"
+                  id="surname"
+                  name="surname"
+                  placeholder="*Campo obligatorio"
+                  required
+                />
+                <label for="dni">DNI</label>
+                <input
+                  type="text"
+                  id="dni"
+                  name="dni"
+                  pattern="[0-9]{8}[A-Za-z]{1}"
+                  minlength="9"
+                  maxlength="9"
+                  placeholder="*Campo obligatorio"
+                  required
+                />
+                <div class="horizontal fields">
+                  <div class="address field">
+                    <label for="address">Dirección</label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      autocomplete="address-line1"
+                      placeholder="*Campo obligatorio"
+                      required
+                    />
+                  </div>
+                  <div class="door-number field">
+                    <label for="door-number">N°</label>
+                    <input
+                      type="text"
+                      id="door-number"
+                      name="door-number"
+                      minlength="1"
+                      maxlength="4"
+                      placeholder="*Campo obligatorio"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="horizontal fields">
+                  <div class="cp field">
+                    <label for="cp">Código Postal</label>
+                    <input
+                      type="text"
+                      id="cp"
+                      name="cp"
+                      pattern="[0-9]{5}"
+                      minlength="5"
+                      maxlength="5"
+                      placeholder="*Campo obligatorio"
+                      required
+                    />
+                  </div>
+                  <div class="municipality field">
+                    <label for="municipality">Municipio</label>
+                    <input
+                      type="text"
+                      id="municipality"
+                      name="municipality"
+                      placeholder="*Campo obligatorio"
+                      required
+                    />
+                  </div>
+                </div>
+                <label for="province">Provincia</label>
+                <input
+                  type="text"
+                  id="province"
+                  name="province"
+                  placeholder="*Campo obligatorio"
+                  required
+                />
+                <div class="horizontal fields">
+                  <div class="phone field">
+                    <label for="phone">Teléfono</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      autocomplete="tel"
+                      pattern="[+]{1}[0-9]{11}"
+                      minlength="12"
+                      maxlength="12"
+                      placeholder="*Obligatorio +34 y tu tl."
+                      required
+                    />
+                  </div>
+                  <div class="email field">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      autocomplete="email"
+                      placeholder="*Campo obligatorio"
+                      required
+                    />
+                  </div>
+                </div>
+                <label for="iban">IBAN</label>
+                <input
+                  type="text"
+                  id="iban"
+                  name="iban"
+                  autocomplete="off"
+                  pattern="[A-Za-z]{2}[0-9]{20}"
+                  minlength="22"
+                  maxlength="22"
+                  placeholder="*Campo obligatorio"
+                  required
+                />
+                <label for="comment">Comentarios</label>
+                <textarea
+                  id="comment"
+                  name="comment"
+                  cols="30"
+                  rows="5"
+                  oninput="limitarPalabras(this)"
+                  placeholder="Máx. 250 palabras"
+                ></textarea>
+                <div class="condiciones">
+                  <a href="#">Politica de privacidad</a>
+                  <a href="#">Terminos y condiciones</a>
+                </div>
+                <input
+                  class="btn enviar"
+                  type="submit"
+                  value="Enviar formulario"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="formulario footer container">
+        <div class="formulario redes box">
+          <div class="linkedin">
+            <a href="https://de.linkedin.com/">
+              <img src="icons/linkedin.png" alt="redes" />
+            </a>
+          </div>
+          <div class="facebook">
+            <a href="https://www.facebook.com/">
+              <img src="icons/facebook.png" alt="redes" />
+            </a>
+          </div>
+          <div class="tiktok">
+            <a href="https://www.tiktok.com/">
+              <img src="icons/tiktok.png" alt="redes" />
+            </a>
+          </div>
+          <div class="instagram">
+            <a href="https://www.instagram.com/">
+              <img src="icons/instagram.png" alt="redes" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      /* FORMULARIO (Limita el número de palabras a introducier en los comentarios)*/
+      function limitarPalabras(textarea) {
+        var maxPalabras = 250;
+        var palabras = textarea.value.split(/\s+/);
+        if (palabras.length > maxPalabras) {
+          textarea.value = palabras.slice(0, maxPalabras).join(" ");
+        }
+      }
+    </script>
+  </body>
+</html>
